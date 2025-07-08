@@ -27,6 +27,19 @@ public class passwordGenerator {
 
         int dateSum = day + month + year;
 
+        if(day < 1 || day > 31){
+            System.out.println("Il giorno di nascita non è valido");
+            return;
+        }
+        if(month < 1 || month > 12){
+            System.out.println("Il mese di nascita non è valido");
+            return;
+        }
+        if(year > 2025 || year < 0){
+            System.out.println("l'anno di nascita non è valido");
+            return;
+        }
+
         System.out.print("la tua password è " + name + "-" + surname + "-" + favouriteColor + "-" + dateSum);
 
     }
